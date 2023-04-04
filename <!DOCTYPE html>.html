@@ -6,6 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picture Memory Game</title>
     <style> 
+  .card {
+    width: 100px;
+    height:100px;
+    background-color: black;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #444;
+    cursor: pointer;
+  }
+    .card img {
+        display:none;
+    }
   .card.flipped img {
 			display: block;
 		}
@@ -40,8 +53,7 @@
     <div class=".card" id="card15"><iframe src="https://drive.google.com/file/d/1HfVH1O4T30T3rlTZG5BUJtMUjOT_whiA/preview" width="200" height="145" allow="autoplay"></iframe></div>
    <div class=".card" id="card16"><iframe src="https://drive.google.com/file/d/13WUzDn4oOlsWVAEKLnS-zudyCTWXMM6Y/preview" width="200" height="145" allow="autoplay"></iframe></div>
 
-<div id="tries">
-</div>
+<div id="tries"></div>
 </body>
 
 
