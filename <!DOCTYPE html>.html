@@ -6,20 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Picture Memory Game</title>
     <style> 
-    .card{
-    width: 100px;
-    height: 100px;
-    background-color: orange;
-    display: inline-block;
-    margin: 10px;
-    cursor: pointer;
-}
-    .card img {
-        display:none;
-    }
+  .card.flipped img {
+			display: block;
+		}
+    .red-x {
+			color: red;
+			font-size: 70px;
+			margin: 10px;
+		}
+
     </style>
 </head>
 <body>
+    
     <h1>Picture Memory Game</h1>
     <p>Match all the images before you make 3 wrong guesses and you WIN!</p>
     <p><span id="score">0</span> wrong guesses</p>
@@ -39,6 +38,12 @@
     <div class=".card" id="card13"><iframe src="https://drive.google.com/file/d/1XWpnDZY3V2FAm_iZy4hWssgiDvrYzsht/preview" width="200" height="145" allow="autoplay"></iframe></div>
     <div class=".card" id="card14"><iframe src="https://drive.google.com/file/d/1klWhdowROzHQ1rE63uvJdfeQ7DcraQre/preview" width="200" height="145" allow="autoplay"></iframe></div>
     <div class=".card" id="card15"><iframe src="https://drive.google.com/file/d/1HfVH1O4T30T3rlTZG5BUJtMUjOT_whiA/preview" width="200" height="145" allow="autoplay"></iframe></div>
-    <div class=".card" id="card16"><iframe src="https://drive.google.com/file/d/13WUzDn4oOlsWVAEKLnS-zudyCTWXMM6Y/preview" width="200" height="145" allow="autoplay"></iframe></div>
+   <div class=".card" id="card16"><iframe src="https://drive.google.com/file/d/13WUzDn4oOlsWVAEKLnS-zudyCTWXMM6Y/preview" width="200" height="145" allow="autoplay"></iframe></div>
+
+<div id="tries">
+</div>
 </body>
+
+
+
 </html>

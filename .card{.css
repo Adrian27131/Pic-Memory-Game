@@ -1,7 +1,16 @@
-.card {
-    width: 200px;
-    height: 145px;
-    background-color: gray;
-    margin: 10px; /* add margin of 10 pixels around the card */
-    display: inline-block;
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center;
+  }
+  
+  .deck {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  
+  .card {
+    list-style: none;
   }
