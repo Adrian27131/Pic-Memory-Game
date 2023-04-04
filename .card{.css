@@ -1,0 +1,7 @@
+.card {
+    width: 200px;
+    height: 145px;
+    background-color: gray;
+    margin: 10px; /* add margin of 10 pixels around the card */
+    display: inline-block;
+  }
