@@ -56,6 +56,7 @@ const checkCards = (i) => {
   const clickedCard = i.target;
   clickedCard.classList.add("flipped");
   const flippedCard = document.querySelectorAll (".flipped")
+  const toggleCard = document.querySelectorAll('.toggleCard')
 if (flippedCard.length === 2){
   if (
     flippedCard[0].getAttribute('name') === flippedCard[1].getAttribute('name')
@@ -74,20 +75,30 @@ if (flippedCard.length === 2){
     playerTries--;
     playerTriesCount.textContent = playerTries; 
     if(playerTries === 0) {
-      reset();
+      reset("Try Again :)");
     } 
   }
 }
+  //win
+  if(toggleCard.length === 14) {
+    reset("YOU WON!!!")
+  }
 };
     
 
-let reset = () => {
+let reset = (text) => {
   let cardData = randomize ();
   let faces = document.querySelectorAll(".face");
   let cards = document.querySelectorAll('.card');
 cardData.forEach((item,index) => {
   cards[index].classList.remove('toggleCard');
+  cards[index].style.pointerEvents = "all"
+  faces[index].src = item.imgSrc; 
+  cards[index].setAttribute("name",item.name);
 });
+playerTries = 3;
+playerTriesCount.textContent = playerTries
+setTimeout(() => window.alert(text), 150);
 };
 
 cardGenerator();
