@@ -43,11 +43,14 @@ card.appendChild(face);
 card.appendChild(back);
 
 
-card.addEventListener('click', (e) => {
+card.addEventListener('click', (i) => {
 card.classList.toggle('toggleCard')
-
-})
+});
 });
 };
+const checkCards = (i) => {
+  const clickedCard = i.target;
+  console.log(clickedCard);
+}
 
 cardGenerator();
