@@ -26,7 +26,7 @@ perspective: 800px;
     position: relative;
     transform-style:preserve-3d;
     transition: all 0.80s ease-in;
-    box-shadow: grey 0px 5px 15px;
+    box-shadow: grey 0px 15px 25px;
 }
 .face,
 .back{

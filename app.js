@@ -57,10 +57,13 @@ const checkCards = (i) => {
   const flippedCard = document.querySelectorAll (".flipped")
 if (flippedCard.length === 2){
   if (
-    flippedCard[0].getAttribute('name') ===
-    flippedCard[1].getAttribute('name')
+    flippedCard[0].getAttribute('name') === flippedCard[1].getAttribute('name')
     ) {
     console.log("Right Guess");
+    flippedCard.forEach(card =>  {
+      card.classList.remove("flipped")
+      card.style.pointerEvents = "none"
+    })
   } else {
     console.log("Wrong Guess");
     flippedCard.forEach(card => {
