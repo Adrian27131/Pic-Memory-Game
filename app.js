@@ -30,6 +30,7 @@ return cardData;
 
 const cardGenerator = () => {
 const cardData = randomize ();
+const cards = document.querySelectorAll(".card")
 cardData.forEach((item) => {
   const card = document.createElement("div")
   const face = document.createElement("img")
@@ -38,19 +39,32 @@ cardData.forEach((item) => {
   face.classList = "face";
   back.classList = "back";
   face.src = item.imgSrc;
+  card.setAttribute('name', item.name);
 section.appendChild(card);
 card.appendChild(face);
 card.appendChild(back);
 
 
 card.addEventListener('click', (i) => {
-card.classList.toggle('toggleCard')
+card.classList.toggle('toggleCard');
+checkCards(i);
 });
 });
 };
 const checkCards = (i) => {
   const clickedCard = i.target;
-  console.log(clickedCard);
+  const flippedCard = document.querySelectorAll (".flipped")
+  clickedCard.classList.add("flipped");
+if (flippedCard.length === 2){
+  if (
+    flippedCard[0].getAttribute('name') ===
+    flippedCard[1].getAttribute('name')
+    ) {
+    console.log("Right Guess");
+  } else {
+    console.log("Wrong Guess");
+  }
 }
+};
 
 cardGenerator();
