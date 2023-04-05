@@ -18,8 +18,7 @@ const getData = () => [{}
 { imgSrc: "./images/images/03910032-2.jpg", name: "flowerpotd"}, 
 { imgSrc: "./images/images/03910032-2.jpg", name: "flowerpotd"}, 
 { imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
+{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"},  
 { imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
 ];
 const randomize = () => {
