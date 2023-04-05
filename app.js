@@ -5,21 +5,21 @@ playerTriesCount.textContent = playerTries
 
 
 const getData = () => [{}
-  ,{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot1"},
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot2"},  
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot3"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot4"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot5"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot6"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot7"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot8"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot9"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot0"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpotd"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpotd"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"},  
-{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot"}, 
+,{ imgSrc: "./images/images/03910032-2.jpg", name: "flowerpot1"},
+{ imgSrc: "./images/images/03930028.jpg", name: "Park"},  
+{ imgSrc: "./images/images/03930028.jpg", name: "Park"}, 
+{ imgSrc: "./images/images/03940030.jpg", name: "Waterfall"}, 
+{ imgSrc: "./images/images/03940030.jpg", name: "Waterfall"}, 
+{ imgSrc: "./images/images/04450015.jpg", name: "Gravestone"}, 
+{ imgSrc: "./images/images/04450015.jpg", name: "Gravestone"}, 
+{ imgSrc: "./images/images/04440019.jpg", name: "Hawk"}, 
+{ imgSrc: "./images/images/04440019.jpg", name: "Hawk"}, 
+{ imgSrc: "./images/images/03930002.jpg", name: "sunset"}, 
+{ imgSrc: "./images/images/03930002.jpg", name: "sunset"}, 
+{ imgSrc: "./images/images/04440034.jpg", name: "pineapple"}, 
+{ imgSrc: "./images/images/04440034.jpg", name: "pineapple"}, 
+{ imgSrc: "./images/images/05460013.jpg", name: "Nikon-Me"},  
+{ imgSrc: "./images/images/05460013.jpg", name: "Nikon-Me"}, 
 ];
 const randomize = () => {
   const cardData = getData();
@@ -53,8 +53,8 @@ checkCards(i);
 };
 const checkCards = (i) => {
   const clickedCard = i.target;
-  const flippedCard = document.querySelectorAll (".flipped")
   clickedCard.classList.add("flipped");
+  const flippedCard = document.querySelectorAll (".flipped")
 if (flippedCard.length === 2){
   if (
     flippedCard[0].getAttribute('name') ===
@@ -63,6 +63,10 @@ if (flippedCard.length === 2){
     console.log("Right Guess");
   } else {
     console.log("Wrong Guess");
+    flippedCard.forEach(card => {
+      card.classList.remove("flipped");
+      setTimeout(() => card.classList.remove("toggleCard"), 1000);
+    })
   }
 }
 };
