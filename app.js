@@ -84,8 +84,6 @@ if (flippedCard.length === 2){
     reset("YOU WON!!!")
   }
 };
-    
-
 let reset = (text) => {
   let cardData = randomize ();
   let faces = document.querySelectorAll(".face");
@@ -100,5 +98,4 @@ playerTries = 3;
 playerTriesCount.textContent = playerTries
 setTimeout(() => window.alert(text), 150);
 };
-
 cardGenerator();

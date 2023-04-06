@@ -1,8 +1,4 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
+
 body{
     height: 100vh;
     display: flex;
@@ -11,10 +7,6 @@ body{
     flex-direction: column;
     background-color: seashell;
 } 
-
-
-
-
 section{
 display:grid;
 grid-template-rows: repeat(4,6rem);
