@@ -75,7 +75,7 @@ if (flippedCard.length === 2){
     playerTries--;
     playerTriesCount.textContent = playerTries; 
     if(playerTries === 0) {
-      //lose game
+      //lose game 
       reset("Try Again :)");
     } 
   }
