@@ -75,11 +75,12 @@ if (flippedCard.length === 2){
     playerTries--;
     playerTriesCount.textContent = playerTries; 
     if(playerTries === 0) {
+      //lose game
       reset("Try Again :)");
     } 
   }
 }
-  //win
+  //win game
   if(toggleCard.length === 14) {
     reset("YOU WON!!!")
   }
